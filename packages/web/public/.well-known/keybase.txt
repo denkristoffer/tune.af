@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/denkristoffer
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://tune.af
+  * I am denkristoffer (https://keybase.io/denkristoffer) on keybase.
+  * I have a public key ASDkM3Tk0tAOjHMrnAHYRdLQglQaH-GyBcoD3DvaccMeLAo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120e43374e4d2d00e8c732b9c01d845d2d082541a1fe1b205ca03dc3bda71c31e2c0a",
+            "host": "keybase.io",
+            "kid": "0120e43374e4d2d00e8c732b9c01d845d2d082541a1fe1b205ca03dc3bda71c31e2c0a",
+            "uid": "bad7d49918aa424734a25e992de59019",
+            "username": "denkristoffer"
+        },
+        "service": {
+            "hostname": "tune.af",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.18"
+    },
+    "ctime": 1485422148,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1485421952,
+        "hash": "52e3f4e5a5e43af7f409beace408d1da3f06105b276c3d4fdeb11fddc2340c0d99de5f95cd745943c7f4eafccbc9acff7dc12928037a1d62d72b81c40afbd515",
+        "seqno": 818101
+    },
+    "prev": "98f94f3ba5d518f3c170f30affbc78b4e5c5f82943528fd072be2104c4611fd4",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg5DN05NLQDoxzK5wB2EXS0IJUGh/hsgXKA9w72nHDHiwKp3BheWxvYWTFAvR7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZTQzMzc0ZTRkMmQwMGU4YzczMmI5YzAxZDg0NWQyZDA4MjU0MWExZmUxYjIwNWNhMDNkYzNiZGE3MWMzMWUyYzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZTQzMzc0ZTRkMmQwMGU4YzczMmI5YzAxZDg0NWQyZDA4MjU0MWExZmUxYjIwNWNhMDNkYzNiZGE3MWMzMWUyYzBhIiwidWlkIjoiYmFkN2Q0OTkxOGFhNDI0NzM0YTI1ZTk5MmRlNTkwMTkiLCJ1c2VybmFtZSI6ImRlbmtyaXN0b2ZmZXIifSwic2VydmljZSI6eyJob3N0bmFtZSI6InR1bmUuYWYiLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xOCJ9LCJjdGltZSI6MTQ4NTQyMjE0OCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDg1NDIxOTUyLCJoYXNoIjoiNTJlM2Y0ZTVhNWU0M2FmN2Y0MDliZWFjZTQwOGQxZGEzZjA2MTA1YjI3NmMzZDRmZGViMTFmZGRjMjM0MGMwZDk5ZGU1Zjk1Y2Q3NDU5NDNjN2Y0ZWFmY2NiYzlhY2ZmN2RjMTI5MjgwMzdhMWQ2MmQ3MmI4MWM0MGFmYmQ1MTUiLCJzZXFubyI6ODE4MTAxfSwicHJldiI6Ijk4Zjk0ZjNiYTVkNTE4ZjNjMTcwZjMwYWZmYmM3OGI0ZTVjNWY4Mjk0MzUyOGZkMDcyYmUyMTA0YzQ2MTFmZDQiLCJzZXFubyI6NywidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBTUmQTUM8T1GYznVgTV6eo5yd+U9Od7k6Q2u13syetIqVJrngqUJyjX0WTT8evFEgraoDeq3kyo5mMICpMv7cFqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgRy60J/OTi6Fh7iSZM9afVW01e+hSh3SX7DRd9Md9ZmyjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/denkristoffer
+
+==================================================================
