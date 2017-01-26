@@ -1,3 +1,3 @@
-# Tune AF
+# TUNE AF
 
 [https://tune.af](https://tune.af)
