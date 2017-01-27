@@ -116,7 +116,10 @@ class Player extends PureComponent {
   }
 
   handleLocationChange(location: Object) {
-    this.playTrackByPermalink(location.pathname.substring(1))
+    const permalink = location.pathname.substring(1)
+
+    window._paq.push(['trackEvent', 'LocationChange', permalink])
+    this.playTrackByPermalink(permalink)
   }
 
   handleTrackEnd() {
@@ -160,6 +163,7 @@ class Player extends PureComponent {
   handleShuffleClick() {
     const { shuffle } = this.state
 
+    window._paq.push(['trackEvent', 'Shuffle', !shuffle])
     this.setState({ shuffle: !shuffle })
   }
 
