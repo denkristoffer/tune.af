@@ -24,7 +24,6 @@ class Playlist extends PureComponent {
         title={track.title}
         permalink={track.permalink}
         artwork_url={track.artwork_url}
-        duration={track.duration}
       />
     ))
 

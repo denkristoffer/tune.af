@@ -14,7 +14,6 @@ type TrackProps = {
   playing: boolean,
   artist: TrackArtist,
   title: string,
-  duration: number,
 }
 
 const Wrapper = styled.article`
@@ -73,16 +72,6 @@ const TitleLink = styled(({ playing, ...rest }) => <Link {...rest} />)`
 class Track extends PureComponent {
 
   props: TrackProps
-  duration: string
-
-  constructor(props: TrackProps) {
-    super(props)
-
-    const minutes = Math.floor(props.duration / 1000 / 60)
-    const seconds = (props.duration / 1000) % 60
-
-    this.duration = `PT${minutes}M${seconds}S`
-  }
 
   render() {
     const { permalink, title, artist, playing } = this.props
