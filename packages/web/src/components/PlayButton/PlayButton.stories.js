@@ -11,4 +11,4 @@ storiesOf('PlayButton', module)
       playing={boolean('Playing', true)}
       handleClick={action('clicked')}
     />
-  ));
+  ))

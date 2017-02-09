@@ -15,4 +15,4 @@ storiesOf('Track', module)
       permalink={action('clicked')}
       id={number('Id', 1)}
     />
-  ));
+  ))

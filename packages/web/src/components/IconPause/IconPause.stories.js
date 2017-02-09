@@ -10,4 +10,4 @@ storiesOf('IconPause', module)
     <IconPause
       fill={color('Fill', '#000')}
     />
-  ));
+  ))

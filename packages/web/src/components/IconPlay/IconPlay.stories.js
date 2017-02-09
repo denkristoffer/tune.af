@@ -10,4 +10,4 @@ storiesOf('IconPlay', module)
     <IconPlay
       fill={color('Fill', '#000')}
     />
-  ));
+  ))

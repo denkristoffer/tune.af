@@ -11,4 +11,4 @@ storiesOf('ShuffleButton', module)
       active={boolean('Shuffling', false)}
       handleClick={action('clicked')}
     />
-  ));
+  ))

@@ -12,4 +12,4 @@ storiesOf('Spinner', module)
       size={number('Size', 7)}
       color={color('Color', '#000000')}
     />
-  ));
+  ))

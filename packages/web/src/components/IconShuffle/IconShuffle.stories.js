@@ -10,4 +10,4 @@ storiesOf('IconShuffle', module)
     <IconShuffle
       fill={color('Fill', '#000')}
     />
-  ));
+  ))
