@@ -5,15 +5,13 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Link from '../Link'
 
-type TrackArtist = {
-  username: string,
-}
-
-type TrackProps = {
+type Props = {
   permalink: string,
   activeTrack: boolean,
-  artist: TrackArtist,
   title: string,
+  artist: {
+    username: string,
+  },
 }
 
 const Wrapper = styled.article`
@@ -71,7 +69,7 @@ const TitleLink = styled(({ activeTrack, ...rest }) => <Link {...rest} />)`
 
 class Track extends PureComponent {
 
-  props: TrackProps
+  props: Props
 
   render() {
     const { permalink, title, artist, activeTrack } = this.props
