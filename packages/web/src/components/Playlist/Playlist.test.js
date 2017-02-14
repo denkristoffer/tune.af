@@ -9,6 +9,7 @@ it('renders without crashing', () => {
   ReactDOM.render(
     <Playlist
       playlist={[{ id: 1, artist: { username: 'John' }}]}
+      playing={true}
       coverUrl="string"
       activeIndex={0}
     />, div

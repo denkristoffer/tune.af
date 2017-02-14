@@ -10,7 +10,7 @@ it('renders without crashing', () => {
     <Track
       artist={{ username: 'John Doe' }}
       title="Lorem Ipsum"
-      playing={true}
+      activeTrack={true}
       permalink="permalink"
       id={2}
       duration={42}

@@ -8,7 +8,7 @@ import Track from './index'
 storiesOf('Track', module)
   .add('Default', () => (
     <Track
-      playing={boolean('Playing', false)}
+      activeTrack={boolean('Playing', false)}
       artist={object('Artist', {username: 'John Doe'})}
       title={text('Title', 'Lorem Ipsum')}
       duration={number('Duration', 8600)}
