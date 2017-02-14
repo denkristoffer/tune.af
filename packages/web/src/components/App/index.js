@@ -55,9 +55,10 @@ const TextCenter = styled.div`
 const App = () => (
   <Container>
     <Helmet
-        defaultTitle="TUNE AF"
-        titleTemplate="%s – TUNE AF"
+      defaultTitle="TUNE AF"
+      titleTemplate="%s – TUNE AF"
     />
+
     <main>
       <Player
         clientId={clientId}

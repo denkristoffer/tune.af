@@ -2,12 +2,17 @@
 
 import React, { PureComponent } from 'react'
 import pickBy from 'lodash/pickBy'
+import Helmet from 'react-helmet'
 import Spinner from '../Spinner'
 import Playlist from '../Playlist'
 import { history } from  '../../History'
 import SoundCloudAudio from 'soundcloud-audio'
 import PlayButton from '../PlayButton'
 import ShuffleButton from '../ShuffleButton'
+import Favicon32 from './favicon-32x32.png'
+import Favicon16 from './favicon-16x16.png'
+import FaviconPaused32 from './favicon-paused-32x32.png'
+import FaviconPaused16 from './favicon-paused-16x16.png'
 
 type PlayerProps = {
   clientId: string,
@@ -176,6 +181,13 @@ class Player extends PureComponent {
 
     return (
       <div>
+        <Helmet
+          link={[
+            {rel: "icon", href: playing ? `${Favicon32}` : `${FaviconPaused32}`, sizes: "32x32"},
+            {rel: "icon", href: playing ? `${Favicon16}` : `${FaviconPaused16}`, sizes: "16x16"},
+          ]}
+        />
+
         <ShuffleButton active={shuffle} handleClick={this.handleShuffleClick} />
         <PlayButton playing={playing} handleClick={this.handlePlayPauseClick} />
 
