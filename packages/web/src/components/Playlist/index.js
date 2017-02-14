@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import Track from '../Track'
 import Cover from '../Cover'
 
-type PlaylistProps = {
+type Props = {
   playlist: Array<Object> | Object,
   activeIndex: ?number,
   coverUrl: ?string,
@@ -14,11 +14,11 @@ type PlaylistProps = {
 
 class Playlist extends PureComponent {
 
-  props: PlaylistProps
+  props: Props
 
   render() {
     const { activeIndex, playlist, coverUrl, playing } = this.props
-    const title = playlist[activeIndex] ? playlist[activeIndex].title : null
+    const title = (playlist && activeIndex) ? playlist[activeIndex].title : null
     const list = playlist.map((track, index) => (
       <Track
         key={track.id}
