@@ -194,6 +194,7 @@ class Player extends PureComponent {
         <Playlist
           playlist={playlist}
           activeIndex={activeIndex}
+          playing={playing}
           coverUrl={coverUrl}
         />
       </div>

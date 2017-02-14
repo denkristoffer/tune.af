@@ -57,6 +57,9 @@ const App = () => (
     <Helmet
       defaultTitle="TUNE AF"
       titleTemplate="%s – TUNE AF"
+      meta={[
+        {name: "description", content: "Tunes, handpicked by @denkristoffer."},
+      ]}
     />
 
     <main>

@@ -11,7 +11,7 @@ type TrackArtist = {
 
 type TrackProps = {
   permalink: string,
-  playing: boolean,
+  activeTrack: boolean,
   artist: TrackArtist,
   title: string,
 }
@@ -39,8 +39,8 @@ const Title = styled.h1`
 `
 
 const Artist = styled.address`
-  background: ${props => props.playing ? '#020202' : '#fdfdfd'};
-  color: ${props => props.playing ? '#fdfdfd' : '#020202'};
+  background: ${props => props.activeTrack ? '#020202' : '#fdfdfd'};
+  color: ${props => props.activeTrack ? '#fdfdfd' : '#020202'};
   font-size: 14px;
   line-height: 18px;
   font-family: Menlo, 'DejaVu Sans Mono', Consolas, 'Source Code Pro', 'Anonymous Pro', 'Courier New', monospace;
@@ -53,9 +53,9 @@ const Artist = styled.address`
   -webkit-font-smoothing: antialiased;
 `
 
-const TitleLink = styled(({ playing, ...rest }) => <Link {...rest} />)`
-  background: ${props => props.playing ? '#020202' : '#fdfdfd'};
-  color: ${props => props.playing ? '#fdfdfd' : '#020202'};
+const TitleLink = styled(({ activeTrack, ...rest }) => <Link {...rest} />)`
+  background: ${props => props.activeTrack ? '#020202' : '#fdfdfd'};
+  color: ${props => props.activeTrack ? '#fdfdfd' : '#020202'};
   font-size: 14px;
   line-height: 18px;
   font-family: Menlo, 'DejaVu Sans Mono', Consolas, 'Source Code Pro', 'Anonymous Pro', 'Courier New', monospace;
@@ -74,23 +74,23 @@ class Track extends PureComponent {
   props: TrackProps
 
   render() {
-    const { permalink, title, artist, playing } = this.props
+    const { permalink, title, artist, activeTrack } = this.props
 
     return (
       <Wrapper>
-        {playing ?
+        {activeTrack && window.location.pathname !== '/' ?
           <Helmet
-            title={title}
             link={[{rel: "canonical", href: `"https://tune.af/${permalink}"`}]}
+            meta={[{ name: "description", content: `${title}. Handpicked by @denkristoffer.` }]}
           />
           : ''
         }
         <Info>
           <Link to={permalink && permalink}>
-            <Artist playing={playing}>{artist.username}</Artist>
+            <Artist activeTrack={activeTrack}>{artist.username}</Artist>
           </Link>
           <Title>
-            <TitleLink playing={playing} to={permalink && permalink}>
+            <TitleLink activeTrack={activeTrack} to={permalink && permalink}>
               {title}
             </TitleLink>
           </Title>
