@@ -18,7 +18,7 @@ class Playlist extends PureComponent {
 
   render() {
     const { activeIndex, playlist, coverUrl, playing } = this.props
-    const title = (playlist && activeIndex !== null) ? playlist[activeIndex].title : null
+    const title = (playlist && (activeIndex || activeIndex === 0)) ? playlist[activeIndex].title : null
     const list = playlist.map((track, index) => (
       <Track
         key={track.id}
