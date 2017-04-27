@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "lerna": "^2.0.0-rc.4"
+  },
+  "scripts": {
+    "build": "cd packages/web && ./node_modules/.bin/react-scripts build"
   }
 }
