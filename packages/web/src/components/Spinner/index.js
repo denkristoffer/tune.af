@@ -1,26 +1,26 @@
 /* @flow */
 
-import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 
 type Props = {
   size: number,
   color?: string,
-}
+};
 
 const hexToRGBNumbers = (hex: string) => {
-  const r = parseInt(hex.substr(1,2),16)
-  const g = parseInt(hex.substr(3,2),16)
-  const b = parseInt(hex.substr(5,2),16)
+  const r = parseInt(hex.substr(1, 2), 16);
+  const g = parseInt(hex.substr(3, 2), 16);
+  const b = parseInt(hex.substr(5, 2), 16);
 
-  return `${r},${g},${b}`
-}
+  return `${r},${g},${b}`;
+};
 
 const rotateCentered = keyframes`
   from { transform: rotate(0deg) translate3d(-50%,-50%,0); }
 
   to { transform: rotate(360deg) translate3d(-50%,-50%,0); }
-`
+`;
 
 const StyledSpinner = styled.div`
   display: block;
@@ -45,12 +45,14 @@ const StyledSpinner = styled.div`
     width: 10em;
     height: 10em;
   }
-`
+`;
 
-const Spinner = ({ color, size }: Props) => <StyledSpinner color={color} size={size} />
+const Spinner = ({ color, size }: Props) => (
+  <StyledSpinner color={color} size={size} />
+);
 
 Spinner.defaultProps = {
   color: '#000000',
-}
+};
 
-export default Spinner
+export default Spinner;

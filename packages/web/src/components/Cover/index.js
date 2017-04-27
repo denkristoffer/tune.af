@@ -1,12 +1,12 @@
 /* @flow */
 
-import React from  'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 type Props = {
   coverUrl: string,
   children?: Element<any>,
-}
+};
 
 const CoverDiv = styled.div`
   overflow: hidden;
@@ -32,12 +32,12 @@ const CoverDiv = styled.div`
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
-`
+`;
 
-const Cover = ({ coverUrl, children } : Props) => (
+const Cover = ({ coverUrl, children }: Props) => (
   <CoverDiv cover={coverUrl.replace(/large/, 't500x500')}>
     {children}
   </CoverDiv>
-)
+);
 
-export default Cover
+export default Cover;

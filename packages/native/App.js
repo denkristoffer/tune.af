@@ -54,7 +54,7 @@ class App extends Component {
         <Touch
           onPress={this.handleLinkClick.bind(
             this,
-            'https://twitter.com/denkristoffer',
+            'https://twitter.com/denkristoffer'
           )}
         >
           <CreditLink>

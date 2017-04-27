@@ -1,9 +1,9 @@
 /* @flow */
 
-import React, { PureComponent } from 'react'
-import Helmet from 'react-helmet'
-import styled from 'styled-components'
-import Link from '../Link'
+import React, { PureComponent } from 'react';
+import Helmet from 'react-helmet';
+import styled from 'styled-components';
+import Link from '../Link';
 
 type Props = {
   permalink: string,
@@ -12,13 +12,13 @@ type Props = {
   artist: {
     username: string,
   },
-}
+};
 
 const Wrapper = styled.article`
   & + & {
     margin-top: 10px;
   }
-`
+`;
 
 const Info = styled.header`
   &::after {
@@ -26,7 +26,7 @@ const Info = styled.header`
     display: block;
     clear: both;
   }
-`
+`;
 
 const Title = styled.h1`
   margin: 0;
@@ -34,11 +34,11 @@ const Title = styled.h1`
   line-height: 0;
   float: left;
   clear: left;
-`
+`;
 
 const Artist = styled.address`
-  background: ${props => props.activeTrack ? '#020202' : '#fdfdfd'};
-  color: ${props => props.activeTrack ? '#fdfdfd' : '#020202'};
+  background: ${props => (props.activeTrack ? '#020202' : '#fdfdfd')};
+  color: ${props => (props.activeTrack ? '#fdfdfd' : '#020202')};
   font-size: 14px;
   line-height: 18px;
   font-family: Menlo, 'DejaVu Sans Mono', Consolas, 'Source Code Pro', 'Anonymous Pro', 'Courier New', monospace;
@@ -49,11 +49,11 @@ const Artist = styled.address`
   padding: 2px 5px;
   position: relative;
   -webkit-font-smoothing: antialiased;
-`
+`;
 
 const TitleLink = styled(({ activeTrack, ...rest }) => <Link {...rest} />)`
-  background: ${props => props.activeTrack ? '#020202' : '#fdfdfd'};
-  color: ${props => props.activeTrack ? '#fdfdfd' : '#020202'};
+  background: ${props => (props.activeTrack ? '#020202' : '#fdfdfd')};
+  color: ${props => (props.activeTrack ? '#fdfdfd' : '#020202')};
   font-size: 14px;
   line-height: 18px;
   font-family: Menlo, 'DejaVu Sans Mono', Consolas, 'Source Code Pro', 'Anonymous Pro', 'Courier New', monospace;
@@ -65,24 +65,29 @@ const TitleLink = styled(({ activeTrack, ...rest }) => <Link {...rest} />)`
   position: relative;
   box-decoration-break: clone;
   -webkit-font-smoothing: antialiased;
-`
+`;
 
 class Track extends PureComponent {
-
-  props: Props
+  props: Props;
 
   render() {
-    const { permalink, title, artist, activeTrack } = this.props
+    const { permalink, title, artist, activeTrack } = this.props;
 
     return (
       <Wrapper>
-        {activeTrack && window.location.pathname !== '/' ?
-          <Helmet
-            link={[{rel: "canonical", href: `"https://tune.af/${permalink}"`}]}
-            meta={[{ name: "description", content: `${title}. Handpicked by @denkristoffer.` }]}
-          />
-          : ''
-        }
+        {activeTrack && window.location.pathname !== '/'
+          ? <Helmet
+              link={[
+                { rel: 'canonical', href: `"https://tune.af/${permalink}"` },
+              ]}
+              meta={[
+                {
+                  name: 'description',
+                  content: `${title}. Handpicked by @denkristoffer.`,
+                },
+              ]}
+            />
+          : ''}
         <Info>
           <Link to={permalink && permalink}>
             <Artist activeTrack={activeTrack}>{artist.username}</Artist>
@@ -94,9 +99,8 @@ class Track extends PureComponent {
           </Title>
         </Info>
       </Wrapper>
-    )
+    );
   }
-
 }
 
-export default Track
+export default Track;

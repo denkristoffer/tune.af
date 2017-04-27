@@ -1,14 +1,14 @@
 /* @flow */
 
-import React, { PureComponent } from 'react'
-import styled from 'styled-components'
-import IconPlay from '../IconPlay'
-import IconPause from '../IconPause'
+import React, { PureComponent } from 'react';
+import styled from 'styled-components';
+import IconPlay from '../IconPlay';
+import IconPause from '../IconPause';
 
 const Button = styled.div`
   box-sizing: border-box;
   position: fixed;
-  background: ${props => props.playing ? '#fff' : '#000'};
+  background: ${props => (props.playing ? '#fff' : '#000')};
   bottom: 10px;
   right: 10px;
   width: 45px;
@@ -22,36 +22,31 @@ const Button = styled.div`
     top: 10px;
     right: 10px;
   }
-`
+`;
 
 type PlayProps = {
   playing: boolean,
   handleClick: Function,
-}
+};
 
 class PlayButton extends PureComponent {
-
-  handleClick: Function
+  handleClick: Function;
 
   constructor(props: PlayProps) {
-    super(props)
+    super(props);
 
-    this.handleClick = props.handleClick.bind(this)
+    this.handleClick = props.handleClick.bind(this);
   }
 
   render() {
-    const { playing } = this.props
+    const { playing } = this.props;
 
     return (
       <Button onClick={this.handleClick} playing={playing}>
-        {playing ?
-          <IconPause /> :
-          <IconPlay fill="#fff" />
-        }
+        {playing ? <IconPause /> : <IconPlay fill="#fff" />}
       </Button>
-    )
+    );
   }
-
 }
 
-export default PlayButton
+export default PlayButton;

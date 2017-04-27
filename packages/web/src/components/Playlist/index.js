@@ -1,24 +1,25 @@
 /* @flow */
 
-import React, { PureComponent } from  'react'
-import Helmet from 'react-helmet'
-import Track from '../Track'
-import Cover from '../Cover'
+import React, { PureComponent } from 'react';
+import Helmet from 'react-helmet';
+import Track from '../Track';
+import Cover from '../Cover';
 
 type Props = {
   playlist: Array<Object> | Object,
   activeIndex: ?number,
   coverUrl: ?string,
   playing: boolean,
-}
+};
 
 class Playlist extends PureComponent {
-
-  props: Props
+  props: Props;
 
   render() {
-    const { activeIndex, playlist, coverUrl, playing } = this.props
-    const title = (playlist && (activeIndex || activeIndex === 0)) ? playlist[activeIndex].title : null
+    const { activeIndex, playlist, coverUrl, playing } = this.props;
+    const title = playlist && (activeIndex || activeIndex === 0)
+      ? playlist[activeIndex].title
+      : null;
     const list = playlist.map((track, index) => (
       <Track
         key={track.id}
@@ -28,29 +29,24 @@ class Playlist extends PureComponent {
         permalink={track.permalink}
         artwork_url={track.artwork_url}
       />
-    ))
+    ));
 
     if (coverUrl) {
       return (
         <Cover coverUrl={coverUrl}>
-          <Helmet
-            title={playing ? title : null}
-          />
+          <Helmet title={playing ? title : null} />
           {list}
         </Cover>
-      )
+      );
     }
 
     return (
       <div>
-        <Helmet
-          title={playing ? title : null}
-        />
+        <Helmet title={playing ? title : null} />
         {list}
       </div>
-    )
+    );
   }
-
 }
 
-export default Playlist
+export default Playlist;

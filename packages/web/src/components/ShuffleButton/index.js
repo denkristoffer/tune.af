@@ -1,13 +1,13 @@
 /* @flow */
 
-import React, { PureComponent } from 'react'
-import styled from 'styled-components'
-import IconShuffle from '../IconShuffle'
+import React, { PureComponent } from 'react';
+import styled from 'styled-components';
+import IconShuffle from '../IconShuffle';
 
 const Button = styled.div`
   box-sizing: border-box;
   position: fixed;
-  background: ${props => props.active ? '#000' : '#fff'};
+  background: ${props => (props.active ? '#000' : '#fff')};
   bottom: 10px;
   right: 70px;
   width: 45px;
@@ -21,33 +21,31 @@ const Button = styled.div`
     top: 10px;
     right: 70px;
   }
-`
+`;
 
 type ShuffleProps = {
   active: boolean,
   handleClick: Function,
-}
+};
 
 class ShuffleButton extends PureComponent {
-
-  handleClick: Function
+  handleClick: Function;
 
   constructor(props: ShuffleProps) {
-    super(props)
+    super(props);
 
-    this.handleClick = props.handleClick.bind(this)
+    this.handleClick = props.handleClick.bind(this);
   }
 
   render() {
-    const { active } = this.props
+    const { active } = this.props;
 
     return (
       <Button onClick={this.handleClick} active={active}>
         <IconShuffle fill={active ? '#fff' : '#000'} />
       </Button>
-    )
+    );
   }
-
 }
 
-export default ShuffleButton
+export default ShuffleButton;
